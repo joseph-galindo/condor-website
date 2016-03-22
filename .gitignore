@@ -1,0 +1,6 @@
+dist/
+node_modules/
+src/markup/yaml.json
+.sass-cache
+.DS_Store
+*/.DS_Store

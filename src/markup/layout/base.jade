@@ -1,0 +1,40 @@
+doctype
+html(lang="en")
+
+    head
+        //- set up meta tags
+        meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+        meta(charset="utf-8")
+
+        title #{page.title}
+
+        meta(name="description", content="#{page.description}")
+        meta(name="keywords", content="#{page.keywords}")
+
+        meta(name="format-detection", content="telephone=no")
+        meta(id="viewport", name="viewport", content="target-densitydpi=device-dpi, width=device-width, user-scalable=0, minimal-ui")
+
+        //- set up link tags
+
+        link(rel="stylesheet" type="text/css" href="css/styles.css")
+        link(rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Open+Sans:400,700')
+        link(rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Cabin')
+        link(rel="icon", type="image/x-icon", href="/favicon.ico")
+
+        //- set up script tags
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src="js/app.js")
+
+    body(ontouchstart="", class="section--#{page.section}")
+
+        main.content--main
+
+            include /partials/header--global.jade
+
+            article.content--article
+                block content
+
+                include /partials/footer--global.jade
+
+

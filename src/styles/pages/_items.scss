@@ -1,0 +1,1473 @@
+.section--items {
+
+	.listing {
+		margin-left:350px;
+		background-color:rgba(159,187,255,0.25);
+		padding:0px 10px 50px;
+
+		h1 {
+			margin:0;
+		}
+
+		.container {
+			position:relative;
+
+			border-top: 1px solid #ECE6FF;
+			margin-top:20px;
+
+			//inline block hack
+			font-size:0px;
+
+			h2 {
+				position:absolute;
+				left:0;
+				top:5px;
+				font-size:22px;
+			}
+
+			//general thumbnail css styles
+
+			.thumbnail {
+				position:relative;
+				display:inline-block;
+				cursor:pointer;
+
+				span {
+					display:none;
+					position:fixed;
+					width:350px;
+					height:100%;
+					left:0;
+					top:50px;
+
+					text-align:center;
+
+					.callout {
+						margin:10px 0 10px 0 !important;
+					}
+
+					.title {
+						font-size:32px;
+						text-decoration:underline;
+						text-transform:uppercase;
+						margin:0 0 20px 0;
+					}
+
+					.hint {
+						font-size:18px;
+						text-transform:uppercase;
+						color:#C1D1F9;
+						width:90%;
+
+						margin:0 5% 20px 5%;
+					}
+
+					.explanation {
+						text-align:left;
+						font-size:14px;
+						list-style:disc;
+						width:89%;
+
+						margin-left:28px;
+						line-height:22px;
+
+						li {
+							margin-bottom:0px;
+
+							ul  {
+								margin-top:5px;
+								font-size:12px;
+
+
+								li {
+									margin-bottom:0px;
+								}
+							}
+						}
+					}
+
+					table {
+						position:absolute;
+						left:50%;
+						transform:translateX(-50%);
+						// margin-top:20px;
+
+						font-size:30px;
+
+						border:2px solid #ECE6FF;
+
+						height:180px;
+						width:180px;
+
+						margin-top:10px;
+
+						td {
+							border:2px solid #ECE6FF;
+
+							width:20%;
+
+							$table-height:20%;
+							height:$table-height;
+							line-height:33px;
+
+							text-align:center;
+							vertical-align:middle;
+
+							// &:first-child {
+							// 	border:none;
+							// }
+
+							&.color {
+								background-color:#8E2626;
+							}
+						}
+					}
+				}
+
+				&:hover {
+					span {
+						display:block;
+					}
+				}
+			}
+
+			//margin-top offset container
+
+			.offset-wrapper {
+				margin-top:35px;
+			}
+
+			//attack container
+
+			&.attack {
+
+				.weapon-type-container {
+
+					font-size:0px;
+				}
+
+				.thumbnail {
+
+					&.dagger {
+
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:48px;
+						height:48px;
+
+						background-size:cover;
+
+						background-position:0 0;
+
+						&.base {
+							background-image: url(../img/items/attack/weapon_dagger.png);
+						}
+
+						&.blood {
+							background-image: url(../img/items/attack/weapon_dagger_blood.png);
+						}
+
+						&.gold {
+							background-image: url(../img/items/attack/weapon_dagger_golden.png);
+						}
+
+						&.tit {
+							background-image: url(../img/items/attack/weapon_dagger_titanium.png);
+						}
+
+						&.obsidian {
+							width:48px;
+							height:48px;
+
+							background-image: url(../img/items/attack/weapon_dagger_obsidian.png);
+							background-size:144px 96px;
+
+							background-position:0 0;
+
+							&.two {
+								background-position:-48px 0;
+							}
+
+							&.three {
+								background-position:-96px 0;
+							}
+						}
+
+						&.glass {
+							background-image: url(../img/items/attack/weapon_dagger_glass.png);
+						}
+
+						&.glass_shard {
+							background-image: url(../img/items/attack/weapon_dagger_shard.png);
+						}
+
+						&.jeweled {
+							background-image: url(../img/items/attack/weapon_dagger_jeweled.png);
+						}
+
+						&.phasing {
+							background-image: url(../img/items/attack/weapon_dagger_phasing.png);
+						}
+
+						&.frost {
+							background-image: url(../img/items/attack/weapon_dagger_frost.png);
+						}
+
+					}
+
+					&.longsword {
+
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:48px;
+						height:48px;
+
+						background-size:cover;
+
+						background-position:0 0;
+
+						&.base {
+							background-image: url(../img/items/attack/weapon_longsword.png);
+						}
+
+						&.blood {
+							background-image: url(../img/items/attack/weapon_longsword_blood.png);
+						}
+
+						&.gold {
+							background-image: url(../img/items/attack/weapon_longsword_golden.png);
+						}
+
+						&.tit {
+							background-image: url(../img/items/attack/weapon_longsword_titanium.png);
+						}
+
+						&.obsidian {
+							width:48px;
+							height:48px;
+
+							background-image: url(../img/items/attack/weapon_longsword_obsidian.png);
+							background-size:144px 96px;
+
+							background-position:0 0;
+
+							&.two {
+								background-position:-48px 0;
+							}
+
+							&.three {
+								background-position:-96px 0;
+							}
+						}
+
+						&.glass {
+							background-image: url(../img/items/attack/weapon_longsword_glass.png);
+						}
+					}
+
+					&.spear {
+
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:48px;
+						height:48px;
+
+						background-size:cover;
+
+						background-position:0 0;
+
+						&.base {
+							background-image: url(../img/items/attack/weapon_spear.png);
+						}
+
+						&.blood {
+							background-image: url(../img/items/attack/weapon_spear_blood.png);
+						}
+
+						&.gold {
+							background-image: url(../img/items/attack/weapon_spear_golden.png);
+						}
+
+						&.tit {
+							background-image: url(../img/items/attack/weapon_spear_titanium.png);
+						}
+
+						&.obsidian {
+							width:48px;
+							height:48px;
+
+							background-image: url(../img/items/attack/weapon_spear_obsidian.png);
+							background-size:144px 96px;
+
+							background-position:0 0;
+
+							&.two {
+								background-position:-48px 0;
+							}
+
+							&.three {
+								background-position:-96px 0;
+							}
+						}
+
+						&.glass {
+							background-image: url(../img/items/attack/weapon_spear_glass.png);
+						}
+					}
+
+					&.broadsword {
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:48px;
+						height:48px;
+
+						background-size:cover;
+
+						background-position:0 0;
+
+						&.base {
+							background-image: url(../img/items/attack/weapon_broadsword.png);
+						}
+
+						&.blood {
+							background-image: url(../img/items/attack/weapon_broadsword_blood.png);
+						}
+
+						&.gold {
+							background-image: url(../img/items/attack/weapon_broadsword_golden.png);
+						}
+
+						&.tit {
+							background-image: url(../img/items/attack/weapon_broadsword_titanium.png);
+						}
+
+						&.obsidian {
+							width:48px;
+							height:48px;
+
+							background-image: url(../img/items/attack/weapon_broadsword_obsidian.png);
+							background-size:144px 96px;
+
+							background-position:0 0;
+
+							&.two {
+								background-position:-48px 0;
+							}
+
+							&.three {
+								background-position:-96px 0;
+							}
+						}
+
+						&.glass {
+							background-image: url(../img/items/attack/weapon_broadsword_glass.png);
+						}
+
+					}
+
+					&.rapier {
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:52px;
+						height:54px;
+
+						background-size:cover;
+
+						background-position:0 0;
+
+						&.base {
+							background-image: url(../img/items/attack/weapon_rapier.png);
+						}
+
+						&.blood {
+							background-image: url(../img/items/attack/weapon_rapier_blood.png);
+						}
+
+						&.gold {
+							background-image: url(../img/items/attack/weapon_rapier_golden.png);
+						}
+
+						&.tit {
+							background-image: url(../img/items/attack/weapon_rapier_titanium.png);
+						}
+
+						&.obsidian {
+							width:52px;
+							height:54px;
+
+							background-image: url(../img/items/attack/weapon_rapier_obsidian.png);
+							background-size:156px 108px;
+
+							background-position:0 0;
+
+							&.two {
+								background-position:-52px 0;
+							}
+
+							&.three {
+								background-position:-104px 0;
+							}
+						}
+
+						&.glass {
+							background-image: url(../img/items/attack/weapon_rapier_glass.png);
+						}
+
+					}
+
+					&.cat {
+
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:48px;
+						height:48px;
+
+						background-size:cover;
+
+						background-position:0 0;
+
+						&.base {
+							background-image: url(../img/items/attack/weapon_cat.png);
+						}
+
+						&.blood {
+							background-image: url(../img/items/attack/weapon_cat_blood.png);
+						}
+
+						&.gold {
+							background-image: url(../img/items/attack/weapon_cat_gold.png);
+						}
+
+						&.tit {
+							background-image: url(../img/items/attack/weapon_cat_titanium.png);
+						}
+
+						&.obsidian {
+							width:48px;
+							height:48px;
+
+							background-image: url(../img/items/attack/weapon_cat_obsidian.png);
+							background-size:144px 96px;
+
+							background-position:0 0;
+
+							&.two {
+								background-position:-48px 0;
+							}
+
+							&.three {
+								background-position:-96px 0;
+							}
+						}
+
+						&.glass {
+							background-image: url(../img/items/attack/weapon_cat_glass.png);
+						}
+					}
+
+					&.flail {
+
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:48px;
+						height:48px;
+
+						background-size:cover;
+
+						background-position:0 0;
+
+						&.base {
+							background-image: url(../img/items/attack/weapon_flail.png);
+						}
+
+						&.blood {
+							background-image: url(../img/items/attack/weapon_flail_blood.png);
+						}
+
+						&.gold {
+							background-image: url(../img/items/attack/weapon_flail_gold.png);
+						}
+
+						&.tit {
+							background-image: url(../img/items/attack/weapon_flail_titanium.png);
+						}
+
+						&.obsidian {
+							width:48px;
+							height:48px;
+
+							background-image: url(../img/items/attack/weapon_flail_obsidian.png);
+							background-size:144px 96px;
+
+							background-position:0 0;
+
+							&.two {
+								background-position:-48px 0;
+							}
+
+							&.three {
+								background-position:-96px 0;
+							}
+						}
+
+						&.glass {
+							background-image: url(../img/items/attack/weapon_flail_glass.png);
+						}
+					}
+
+					&.whip {
+
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:48px;
+						height:48px;
+
+						background-size:cover;
+
+						background-position:0 0;
+
+						&.base {
+							background-image: url(../img/items/attack/weapon_whip.png);
+						}
+
+						&.blood {
+							background-image: url(../img/items/attack/weapon_whip_blood.png);
+						}
+
+						&.gold {
+							background-image: url(../img/items/attack/weapon_whip_golden.png);
+						}
+
+						&.tit {
+							background-image: url(../img/items/attack/weapon_whip_titanium.png);
+						}
+
+						&.obsidian {
+							width:48px;
+							height:48px;
+
+							background-image: url(../img/items/attack/weapon_whip_obsidian.png);
+							background-size:144px 96px;
+
+							background-position:0 0;
+
+							&.two {
+								background-position:-48px 0;
+							}
+
+							&.three {
+								background-position:-96px 0;
+							}
+						}
+
+						&.glass {
+							background-image: url(../img/items/attack/weapon_whip_glass.png);
+						}
+					}
+
+					&.bow {
+
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:50px;
+						height:52px;
+
+						background-size:cover;
+
+						background-position:0 0;
+
+						&.base {
+							background-image: url(../img/items/attack/weapon_bow.png);
+						}
+
+						&.blood {
+							background-image: url(../img/items/attack/weapon_bow_blood.png);
+						}
+
+						&.gold {
+							background-image: url(../img/items/attack/weapon_bow_golden.png);
+						}
+
+						&.tit {
+							background-image: url(../img/items/attack/weapon_bow_titanium.png);
+						}
+
+						&.obsidian {
+							width:50px;
+							height:52px;
+
+							background-image: url(../img/items/attack/weapon_bow_obsidian.png);
+							background-size:150px 104px;
+
+							background-position:0 0;
+
+							&.two {
+								background-position:-50px 0;
+							}
+
+							&.three {
+								background-position:-100px 0;
+							}
+						}
+
+						&.glass {
+							background-image: url(../img/items/attack/weapon_bow_glass.png);
+						}
+					}
+
+					&.xbow {
+
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:54px;
+						height:54px;
+
+						background-size:216px 108px;
+
+						background-position:-162px 0;
+
+						&.oneloaded {
+							background-position:-108px 0;
+						}
+
+						&.twoloaded {
+							background-position:-54px 0;
+						}
+
+						&.threeloaded {
+							background-position:0 0;
+						}
+
+						&.base {
+							background-image: url(../img/items/attack/weapon_crossbow.png);
+						}
+
+						&.blood {
+							background-image: url(../img/items/attack/weapon_crossbow_blood.png);
+						}
+
+						&.gold {
+							background-image: url(../img/items/attack/weapon_crossbow_golden.png);
+						}
+
+						&.tit {
+							background-image: url(../img/items/attack/weapon_crossbow_titanium.png);
+						}
+
+						&.obsidian {
+							width:54px;
+							height:54px;
+
+							background-image: url(../img/items/attack/weapon_crossbow_obsidian.png);
+							background-size:648px 108px;
+
+							&.lv2a {
+								background-position:-380+2px 0;
+							}
+
+							&.lv2b {
+								background-position:-326+2px 0;
+							}
+
+							&.lv2c {
+								background-position:-272+2px 0;
+							}
+
+							&.lv2d {
+								background-position:-218+2px 0;
+							}
+
+							&.lv3a {
+								background-position:-596+2px 0;
+							}
+
+							&.lv3b {
+								background-position:-542+2px 0;
+							}
+
+							&.lv3c {
+								background-position:-488+2px 0;
+							}
+
+							&.lv3d {
+								background-position:-434+2px 0;
+							}
+						}
+
+						&.glass {
+							background-image: url(../img/items/attack/weapon_crossbow_glass.png);
+						}
+					}
+
+					&.blunderbuss {
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:50px;
+						height:72px;
+
+						background-size:100px 144px;
+
+						background-position:0 0;
+
+						background-image: url(../img/items/attack/weapon_blunderbuss.png);
+
+						&.two {
+							background-position:-50px 0;
+						}
+					}
+
+					&.rifle {
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:50px;
+						height:74px;
+
+						background-size:100px 148px;
+
+						background-position:0 0;
+
+						background-image: url(../img/items/attack/weapon_rifle.png);
+
+						&.two {
+							background-position:-50px 0;
+						}
+					}
+
+					&.lute {
+						//default for most sizes, overwrite if necessary in subclasses
+
+						width:64px;
+						height:66px;
+
+						background-size:256px 132px;
+
+						background-position:-192px 0;
+
+						background-image: url(../img/items/attack/golden_lute_magic.png);
+
+						&.oneloaded {
+							background-position:-128px 0;
+						}
+
+						&.twoloaded {
+							background-position:-64px 0;
+						}
+
+						&.threeloaded {
+							background-position:0 0;
+						}
+					}
+				}
+
+			}
+
+			//head container
+
+			&.head {
+
+				//define images, etc here
+
+				.thumbnail {
+
+					&.blast_helm {
+
+						width:44px;
+						height:42px;
+
+						background-image: url(../img/items/head/head_blast_helm.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.circlet {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/head/head_circlet_telepathy.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.greed {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/head/head_crown_of_greed.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.teleportation {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/head/head_crown_of_teleportation.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.thorns {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/head/head_crown_of_thorns.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.jaw {
+
+						width:40px;
+						height:28px;
+
+						background-image: url(../img/items/head/head_glass_jaw.png);
+						background-size:cover;
+
+						background-position:0 0;
+
+						margin-bottom:10px;
+					}
+
+					&.helm {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/head/head_helmet.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.miners {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/head/head_miners_cap.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.monocle {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/head/head_monocle.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.sunglasses {
+
+						width:60px;
+						height:48px;
+
+						background-image: url(../img/items/head/head_sunglasses.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+				}
+			}
+
+			//shovel container
+
+			&.shovel {
+
+				//define images, etc here
+
+				.thumbnail {
+
+					&.base_shovel {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/shovel/shovel_basic.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.titanium_shovel {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/shovel/shovel_titanium.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.obsidian_shovel {
+
+						width:52px;
+						height:52px;
+
+						background-image: url(../img/items/shovel/shovel_obsidian.png);
+						background-size:156px 104px;
+
+						background-position:0 0;
+
+						&.two {
+							background-position:-52px 0;
+						}
+
+						&.three {
+							background-position:-104px 0;
+						}
+					}
+
+					&.glass_shovel {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/shovel/shovel_glass.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.glass_shard_shovel {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/shovel/shovel_shard.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.pickaxe {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/shovel/pickaxe.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.crystal_shovel {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/shovel/shovel_crystal.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.blood_shovel {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/shovel/shovel_blood.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+				}
+			}
+
+			//torch container
+
+			&.torch {
+
+				//define images, etc here
+
+				.thumbnail {
+
+					&.base_torch {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/torch/torch_1.png);
+						background-size:cover;
+
+						background-position:0 3px;
+					}
+
+					&.bright_torch {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/torch/torch_2.png);
+						background-size:cover;
+
+						background-position:0 1px;
+					}
+
+					&.obsidian_torch {
+
+						width:48px;
+						height:54px;
+
+						background-image: url(../img/items/torch/torch_obsidian.png);
+						background-size:144px 108px;
+
+						background-position:0 0;
+
+						&.two {
+							background-position:-48px 0;
+						}
+
+						&.three {
+							background-position:-96px 0;
+						}
+					}
+
+					&.lum_torch {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/torch/torch_3.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.glass_torch {
+
+						width:48px;
+						height:54px;
+
+						background-image: url(../img/items/torch/torch_glass.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.infernal_torch {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/torch/torch_infernal.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.foresight_torch {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/torch/torch_foresight.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+				}
+			}
+
+			//ring container
+
+			&.ring {
+
+				//define images, etc here
+
+				.thumbnail {
+
+					&.becoming {
+
+						width:44px;
+						height:38px;
+
+						background-image: url(../img/items/ring/ring_becoming.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.charisma {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_charisma.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.courage {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_courage.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.gold {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_gold.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.luck {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_luck.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.mana {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_mana.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.might {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_might.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.peace {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_peace.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.phasing {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_phasing.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.protection {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_protection.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.regen {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_regeneration.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.shadows {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_shadows.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.shielding {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_shielding.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.war {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/ring/ring_war.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.wonder {
+
+						width:44px;
+						height:42px;
+
+						background-image: url(../img/items/ring/ring_wonder.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+				}
+			}
+
+			//chest container 
+
+			&.chest {
+
+				//define images, etc here
+
+				.thumbnail {
+
+					&.leather {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/armor/armor_leather.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.chainmail {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/armor/armor_chainmail.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.plate {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/armor/armor_platemail.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.plate_dorian {
+
+						width:48px;
+						height:52px;
+
+						background-image: url(../img/items/armor/armor_platemail_dorian.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.obsidian_armor {
+
+						width:52px;
+						height:52px;
+
+						background-image: url(../img/items/armor/armor_obsidian.png);
+						background-size:156px 104px;
+
+						background-position:0 0;
+
+						&.two {
+							background-position:-52px 0;
+						}
+
+						&.three {
+							background-position:-104px 0;
+						}
+					}
+
+					&.hplate {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/armor/armor_heavyplate.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.glass {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/armor/armor_glass.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+
+					&.gi {
+
+						width:48px;
+						height:48px;
+
+						background-image: url(../img/items/armor/armor_gi.png);
+						background-size:cover;
+
+						background-position:0 0;
+					}
+				}
+			}
+
+			//boots container
+
+			&.boots {
+				.ballet {
+					width:48px;
+					height:48px;
+
+					background-image: url(../img/items/boots/feet_ballet_shoes.png);
+					background-size:cover;
+
+					background-position:0 0;
+				}
+
+				.explorers {
+					width:48px;
+					height:48px;
+
+					background-image: url(../img/items/boots/feet_boots_explorers.png);
+					background-size:cover;
+
+					background-position:0 0;
+				}
+
+				.lead {
+					width:48px;
+					height:50px;
+
+					background-image: url(../img/items/boots/feet_boots_lead.png);
+					background-size:cover;
+
+					background-position:0 0;
+				}
+
+				.leaping {
+					width:48px;
+					height:48px;
+
+					background-image: url(../img/items/boots/feet_boots_leaping.png);
+					background-size:cover;
+
+					background-position:0 0;
+				}
+
+				.lunging {
+					width:30px;
+					height:48px;
+
+					background-image: url(../img/items/boots/feet_boots_lunging.png);
+					background-size:cover;
+
+					background-position:0 0;
+				}
+
+				.pain {
+					width:48px;
+					height:48px;
+
+					background-image: url(../img/items/boots/feet_boots_pain.png);
+					background-size:cover;
+
+					background-position:0 0;
+				}
+
+				.speed {
+					width:48px;
+					height:48px;
+
+					background-image: url(../img/items/boots/feet_boots_speed.png);
+					background-size:cover;
+
+					background-position:0 0;
+				}
+
+				.strength {
+					width:48px;
+					height:48px;
+
+					background-image: url(../img/items/boots/feet_boots_strength.png);
+					background-size:cover;
+
+					background-position:0 0;
+				}
+
+				.float {
+					width:48px;
+					height:48px;
+
+					background-image: url(../img/items/boots/feet_boots_winged.png);
+					background-size:cover;
+
+					background-position:0 0;
+				}
+
+				.greaves {
+					width:48px;
+					height:48px;
+
+					background-image: url(../img/items/boots/feet_greaves.png);
+					background-size:cover;
+
+					background-position:0 0;
+				}
+			}
+		}
+	}
+}

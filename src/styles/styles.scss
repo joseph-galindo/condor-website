@@ -1,0 +1,36 @@
+//import any util styles
+
+@import 'util/_reset.scss';
+
+//import styles for any partials
+
+@import 'partials/_header--global.scss';
+@import 'partials/_footer--global.scss';
+
+//import styles for any pages
+
+@import 'pages/_index.scss';
+@import 'pages/_items.scss';
+
+//any custom high-level scss goes here - anything below here will overwrite any of the scss imported above this
+
+body {
+	background-color:#26314C;
+	// background-color:red;
+	font-family:'Open Sans', sans-serif;
+	font-size:22px;
+	color:#ECE6FF;
+
+	h1 {
+		text-align:center;
+		font-size:56px;
+
+		margin: 20px 0 20px auto;
+
+		text-decoration:underline;
+	}
+}
+
+article {
+	padding-top:50px;
+}

@@ -1,0 +1,68 @@
+.section--index {
+	article {
+		margin: 0 5%;
+
+		p {
+			margin: 20px 0 20px 0;
+			line-height:32px;
+		}
+	}
+
+	.buttons-container {
+
+		font-size:0px;
+		//inline block space hack
+
+		text-align:center;
+		//center btns
+
+		a {
+			text-decoration:none;
+			color:#ECE6FF;
+
+			&:hover, &.active {
+
+			}
+
+			&:hover {
+				.button {
+					background: #ECE6FF;
+
+					p {
+						color: #26314C;
+					}
+				}
+			}
+
+			&:visited {
+				color:#ECE6FF;
+			}
+		}
+
+		.button {
+			position:relative;
+			display:inline-block;
+			width:200px;
+			height:200px;
+
+			border:3px solid #ECE6FF;
+			border-radius:50%;
+
+			margin:25px;
+
+			transition: background 250ms ease-in;
+
+			p {
+				font-size:36px;
+				margin:0;
+
+				position:absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				transition: color 250ms linear;
+			}
+		}
+	}
+}
