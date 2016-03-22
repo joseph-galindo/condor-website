@@ -1,0 +1,66 @@
+$media-queries: (
+    "sm" : "only screen and (max-width: 640px)",
+    "smr" : "only screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2)",
+    "md" : "only screen and (min-width: 641px) and (max-width: 1024px)",
+    "mdr" : "only screen and (min-width: 641px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)",
+    "lg" : "only screen and (min-width: 1025px)",
+    "lgr" : "only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2)"
+);
+
+@mixin mq($queries...) {
+
+    $combine: true;
+    $q: ();
+
+    @each $query in $queries {
+
+        @if not map-has-key($media-queries, $query) {
+
+            @warn "No media query found for `#{$query}` in $media-queries map. Content omitted.";
+
+        } @else {
+
+            @if $combine == true {
+
+                $q: append($q, #{map-get($media-queries, $query)});
+
+            } @else {
+
+                @media #{map-get($media-queries, $query)} {
+                    @content;
+                }
+
+            }
+        }
+    }
+
+    @if $combine == true {
+
+        $joined: join($q, (), comma);
+
+        @media #{$joined} {
+            @content;
+        }
+
+    }
+}
+
+//------- Hide things at certain breakpoints through CSS classes -----//
+
+.hide--sm {
+    @include mq("sm","smr") {
+        display:none !important;
+    }
+}
+
+.hide--md {
+    @include mq("md","mdr") {
+        display:none !important;
+    }
+}
+
+.hide--lg {
+    @include mq("lg","lgr") {
+        display:none !important;
+    }
+}
